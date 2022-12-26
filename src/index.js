@@ -23,3 +23,7 @@
 // class Notes
 //      -   name
 //      -   note
+
+import { template } from "./template";
+
+template();
