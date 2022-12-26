@@ -1,1 +1,0 @@
-(()=>{"use strict";(()=>{const e=document.querySelector("body"),t=document.createElement("div");t.id="header",t.textContent="huhu";const d=document.createElement("div");d.id="nav-bar";const n=document.createElement("div");n.id="content",e.appendChild(t),e.appendChild(d),e.appendChild(n)})()})();
