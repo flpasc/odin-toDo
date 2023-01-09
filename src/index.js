@@ -9,5 +9,4 @@ layout();
 footer();
 navBar();
 header();
-
 newPopup();
