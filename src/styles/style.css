@@ -1,0 +1,69 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#main {
+	min-width: 100vw;
+	min-height: 100vh;
+	background-color: rgb(97, 228, 127);
+	display: grid;
+	grid-template: 60px 1fr 40px / 1fr 4fr;
+}
+
+#header {
+	background-color: rgb(231, 231, 127);
+	grid-area: 1 / 1 / 2 / 3;
+}
+
+#nav-bar {
+	background-color: rgb(131, 131, 225);
+	grid-area: 2 / 1 / 3 / 2;
+}
+
+#nav-bar > ul {
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+}
+
+#footer {
+	background-color: rgb(219, 124, 124);
+	grid-area: 3 / 1 / 4 / 3;
+	flex-direction: column;
+}
+
+#footer > ul {
+	list-style: none;
+	display: flex;
+	justify-content: space-around;
+	align-content: center;
+}
+
+#new-popup {
+	position: absolute;
+	background-color: rgb(211, 168, 88);
+	min-height: 50vh;
+	min-width: 50vw;
+
+	display: grid;
+	grid-template: 30px 1fr / 1fr 4fr;
+}
+
+#popup-nav {
+	grid-area: 2 / 1 / 3 / 2;
+	background-color: rgb(175, 115, 230);
+}
+
+#popup-heading {
+	background-color: rgb(221, 119, 187);
+	grid-area: 1 / 1 / 2 / 3;
+}
+
+#popup-input {
+	background-color: rgb(219, 230, 60);
+	grid-area: 2 / 2 / 3 / 3;
+}
