@@ -1,3 +1,7 @@
+import { newTodo } from "./newTodo";
+import { newProject } from "./newProject";
+import { newNote } from "./newNote";
+
 export const newPopup = () => {
 	const body = document.querySelector("body");
 	const popup = document.createElement("div");
@@ -16,15 +20,15 @@ export const newPopup = () => {
 
 	const item1 = document.createElement("li");
 	item1.textContent = "Todo";
-	// item1.addEventListener('click', newTodo)
+	item1.addEventListener("click", newTodo);
 
 	const item2 = document.createElement("li");
 	item2.textContent = "Project";
-	// item2.addEventListener('click', newProject)
+	item2.addEventListener("click", newProject);
 
 	const item3 = document.createElement("li");
 	item3.textContent = "Notes";
-	// item3.addEventListener('click', newNote)
+	item3.addEventListener("click", newNote);
 
 	list.appendChild(item1);
 	list.appendChild(item2);

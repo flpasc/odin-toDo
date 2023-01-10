@@ -66,4 +66,39 @@ body {
 #popup-input {
 	background-color: rgb(219, 230, 60);
 	grid-area: 2 / 2 / 3 / 3;
+	display: grid;
+	grid-template: 1fr 6fr 1fr 1fr / 1fr 1fr;
+}
+
+.new-title {
+	grid-area: 1 / 1 / 2 / 3;
+	margin: 2px 2px;
+}
+
+.new-info {
+	grid-area: 2 / 1 / 3 / 3;
+	margin: 2px 2px;
+}
+
+.new-date {
+	grid-area: 3/ 1 / 4 / 3;
+}
+
+#priorities {
+	display: flex;
+	grid-area: 4 / 1 / 5 / 2;
+}
+
+#add-btn-area {
+	display: flex;
+	grid-area: 4 / 2 / 5 / 3;
+	justify-content: right;
+}
+
+#add-project {
+	grid-area: 4 / 2 / 5 / 3;
+}
+
+#add-note-btn {
+	grid-area: 4 / 2 / 5 / 3;
 }
