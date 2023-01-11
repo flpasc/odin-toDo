@@ -1,4 +1,4 @@
-import { newPopup } from "../newPopup";
+import { newPopup } from "./newPopup";
 
 export const navBar = () => {
 	const navBar = document.getElementById("nav-bar");

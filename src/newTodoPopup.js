@@ -1,3 +1,6 @@
+import { addTodo } from "./addTodo";
+import { TodoManager } from "./todo";
+
 export const newTodo = () => {
 	const content = document.getElementById("popup-input");
 	content.innerHTML = "";
@@ -40,8 +43,9 @@ export const newTodo = () => {
 	const addBtn = document.createElement("button");
 	addBtn.id = "btn-add";
 	addBtn.textContent = "ADD";
-	addButtonArea.appendChild(addBtn);
+	addBtn.addEventListener("click", TodoManager.addTodo);
 
+	addButtonArea.appendChild(addBtn);
 	content.appendChild(title);
 	content.appendChild(info);
 	content.appendChild(date);

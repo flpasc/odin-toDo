@@ -10,46 +10,6 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./newNote.js":
-/*!********************!*\
-  !*** ./newNote.js ***!
-  \********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"newNote\": () => (/* binding */ newNote)\n/* harmony export */ });\nconst newNote = () => {\n\tconst content = document.getElementById(\"popup-input\");\n\tcontent.innerHTML = \"\";\n\n\tconst title = document.createElement(\"textarea\");\n\ttitle.classList = \"new-title\";\n\ttitle.placeholder = \"Title: Gear for bikepacking\";\n\n\tconst info = document.createElement(\"textarea\");\n\tinfo.classList = \"new-info\";\n\tinfo.placeholder = \"Details: e.g buy a small toothbrush\";\n\n\tconst newNoteBtn = document.createElement(\"button\");\n\tnewNoteBtn.id = \"add-note-btn\";\n\tnewNoteBtn.textContent = \"CREATE NOTE\";\n\n\tcontent.appendChild(title);\n\tcontent.appendChild(info);\n\tcontent.appendChild(newNoteBtn);\n};\n\n\n//# sourceURL=webpack://odin-todo/./newNote.js?");
-
-/***/ }),
-
-/***/ "./newPopup.js":
-/*!*********************!*\
-  !*** ./newPopup.js ***!
-  \*********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"newPopup\": () => (/* binding */ newPopup)\n/* harmony export */ });\n/* harmony import */ var _newTodo__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./newTodo */ \"./newTodo.js\");\n/* harmony import */ var _newProject__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./newProject */ \"./newProject.js\");\n/* harmony import */ var _newNote__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./newNote */ \"./newNote.js\");\n\n\n\n\nconst newPopup = () => {\n\tconst body = document.querySelector(\"body\");\n\tconst popup = document.createElement(\"div\");\n\tpopup.id = \"new-popup\";\n\n\t// heading for popup\n\tconst heading = document.createElement(\"div\");\n\theading.id = \"popup-heading\";\n\theading.textContent = \"Create new...\";\n\n\t// nav-bar for the popup\n\tconst nav = document.createElement(\"div\");\n\tnav.id = \"popup-nav\";\n\n\tconst list = document.createElement(\"ul\");\n\n\tconst item1 = document.createElement(\"li\");\n\titem1.textContent = \"Todo\";\n\titem1.addEventListener(\"click\", _newTodo__WEBPACK_IMPORTED_MODULE_0__.newTodo);\n\n\tconst item2 = document.createElement(\"li\");\n\titem2.textContent = \"Project\";\n\titem2.addEventListener(\"click\", _newProject__WEBPACK_IMPORTED_MODULE_1__.newProject);\n\n\tconst item3 = document.createElement(\"li\");\n\titem3.textContent = \"Notes\";\n\titem3.addEventListener(\"click\", _newNote__WEBPACK_IMPORTED_MODULE_2__.newNote);\n\n\tlist.appendChild(item1);\n\tlist.appendChild(item2);\n\tlist.appendChild(item3);\n\n\tconst inputs = document.createElement(\"div\");\n\tinputs.id = \"popup-input\";\n\n\t// append to popup\n\tnav.appendChild(list);\n\tpopup.appendChild(heading);\n\tpopup.appendChild(nav);\n\tpopup.appendChild(inputs);\n\tbody.appendChild(popup);\n};\n\n\n//# sourceURL=webpack://odin-todo/./newPopup.js?");
-
-/***/ }),
-
-/***/ "./newProject.js":
-/*!***********************!*\
-  !*** ./newProject.js ***!
-  \***********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"newProject\": () => (/* binding */ newProject)\n/* harmony export */ });\nconst newProject = () => {\n\tconst content = document.getElementById(\"popup-input\");\n\tcontent.innerHTML = \"\";\n\n\tconst title = document.createElement(\"textarea\");\n\ttitle.classList = \"new-title\";\n\ttitle.placeholder = \"Title: Do Something\";\n\n\tconst newProjectBtn = document.createElement(\"button\");\n\tnewProjectBtn.id = \"add-project\";\n\tnewProjectBtn.textContent = \"CREATE PROJECT\";\n\n\tcontent.appendChild(title);\n\tcontent.appendChild(newProjectBtn);\n};\n\n\n//# sourceURL=webpack://odin-todo/./newProject.js?");
-
-/***/ }),
-
-/***/ "./newTodo.js":
-/*!********************!*\
-  !*** ./newTodo.js ***!
-  \********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"newTodo\": () => (/* binding */ newTodo)\n/* harmony export */ });\nconst newTodo = () => {\n\tconst content = document.getElementById(\"popup-input\");\n\tcontent.innerHTML = \"\";\n\n\tconst title = document.createElement(\"textarea\");\n\ttitle.classList = \"new-title\";\n\ttitle.placeholder = \"Title: Empty trash\";\n\n\tconst info = document.createElement(\"textarea\");\n\tinfo.classList = \"new-info\";\n\tinfo.placeholder = \"Details: e.g bathroom, kitchen, desk\";\n\n\tconst date = document.createElement(\"input\");\n\tdate.classList = \"new-date\";\n\tdate.type = \"date\";\n\n\t// prioritie buttons\n\tconst priorities = document.createElement(\"div\");\n\tpriorities.id = \"priorities\";\n\n\tconst lowPrio = document.createElement(\"button\");\n\tlowPrio.textContent = \"LOW\";\n\tlowPrio.id = \"low-prioritie\";\n\n\tconst mediumPrio = document.createElement(\"button\");\n\tmediumPrio.textContent = \"MEDIUM\";\n\tmediumPrio.id = \"med-prioritie\";\n\n\tconst highPrio = document.createElement(\"button\");\n\thighPrio.textContent = \"HIGH\";\n\thighPrio.id = \"high-prioritie\";\n\n\tpriorities.appendChild(lowPrio);\n\tpriorities.appendChild(mediumPrio);\n\tpriorities.appendChild(highPrio);\n\n\t// create add button and the area\n\tconst addButtonArea = document.createElement(\"div\");\n\taddButtonArea.id = \"add-btn-area\";\n\tconst addBtn = document.createElement(\"button\");\n\taddBtn.id = \"btn-add\";\n\taddBtn.textContent = \"ADD\";\n\taddButtonArea.appendChild(addBtn);\n\n\tcontent.appendChild(title);\n\tcontent.appendChild(info);\n\tcontent.appendChild(date);\n\tcontent.appendChild(priorities);\n\tcontent.appendChild(addButtonArea);\n};\n\n\n//# sourceURL=webpack://odin-todo/./newTodo.js?");
-
-/***/ }),
-
 /***/ "./node_modules/css-loader/dist/cjs.js!./src/styles/style.css":
 /*!********************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./src/styles/style.css ***!
@@ -150,6 +110,16 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 
 /***/ }),
 
+/***/ "./src/addTodo.js":
+/*!************************!*\
+  !*** ./src/addTodo.js ***!
+  \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"addTodo\": () => (/* binding */ addTodo)\n/* harmony export */ });\n/* harmony import */ var _todo__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./todo */ \"./src/todo.js\");\n/* harmony import */ var _storage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../storage */ \"./storage.js\");\n\n\n\nconst addTodo = () => {\n\tconst title = document.querySelector(\".new-title\").value;\n\tconst info = document.querySelector(\".new-info\").value;\n\tconst dueDate = document.querySelector(\".new-date\").value;\n\tconst prio = () => \"notAssigned\";\n\n\tlet todo = new _todo__WEBPACK_IMPORTED_MODULE_0__.Todo(title, info, dueDate, prio());\n\tconsole.log(_storage__WEBPACK_IMPORTED_MODULE_1__.storage);\n\t_storage__WEBPACK_IMPORTED_MODULE_1__.storage.push(todo);\n\tconsole.log(_storage__WEBPACK_IMPORTED_MODULE_1__.storage);\n\twindow.localStorage.setItem(\"todoArray\", JSON.stringify(_storage__WEBPACK_IMPORTED_MODULE_1__.storage));\n};\n\n// wo speichern? in extra modul in einem array? nur local auf rechner?\n// wie greife ich auf array von außerhalb des modules zu?\n// kann mehrfach der gleiche name gespeichert werden? und dann via for loop itterieeren?\n\n\n//# sourceURL=webpack://odin-todo/./src/addTodo.js?");
+
+/***/ }),
+
 /***/ "./src/footer.js":
 /*!***********************!*\
   !*** ./src/footer.js ***!
@@ -196,7 +166,67 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \***********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"navBar\": () => (/* binding */ navBar)\n/* harmony export */ });\n/* harmony import */ var _newPopup__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../newPopup */ \"./newPopup.js\");\n\n\nconst navBar = () => {\n\tconst navBar = document.getElementById(\"nav-bar\");\n\n\tconst list = document.createElement(\"ul\");\n\n\tconst item1 = document.createElement(\"li\");\n\titem1.textContent = \"Home\";\n\titem1.id = \"home-view\";\n\titem1.classList = \"nav-link\";\n\t// item1.addEventListener(\"click\", displayHome);\n\n\tconst item2 = document.createElement(\"li\");\n\titem2.textContent = \"To-Do\";\n\titem2.id = \"todo-view\";\n\titem1.classList = \"nav-link\";\n\t// item1.addEventListener(\"click\", displayTodo);\n\n\tconst item3 = document.createElement(\"li\");\n\titem3.textContent = \"Projects\";\n\titem3.id = \"projects-view\";\n\titem1.classList = \"nav-link\";\n\t// item1.addEventListener(\"click\", displayProjects);\n\n\tconst item4 = document.createElement(\"li\");\n\titem4.textContent = \"Notes\";\n\titem4.id = \"notes-view\";\n\titem1.classList = \"nav-link\";\n\t// item1.addEventListener(\"click\", displayNotes);\n\n\tconst btnNewTodo = document.createElement(\"button\");\n\tbtnNewTodo.id = \"btn-newTodo\";\n\tbtnNewTodo.textContent = \"+\";\n\tbtnNewTodo.addEventListener(\"click\", _newPopup__WEBPACK_IMPORTED_MODULE_0__.newPopup);\n\n\tlist.appendChild(item1);\n\tlist.appendChild(item2);\n\tlist.appendChild(item3);\n\tlist.appendChild(item4);\n\n\tnavBar.appendChild(list);\n\tnavBar.appendChild(btnNewTodo);\n};\n\n\n//# sourceURL=webpack://odin-todo/./src/navBar.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"navBar\": () => (/* binding */ navBar)\n/* harmony export */ });\n/* harmony import */ var _newPopup__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./newPopup */ \"./src/newPopup.js\");\n\n\nconst navBar = () => {\n\tconst navBar = document.getElementById(\"nav-bar\");\n\n\tconst list = document.createElement(\"ul\");\n\n\tconst item1 = document.createElement(\"li\");\n\titem1.textContent = \"Home\";\n\titem1.id = \"home-view\";\n\titem1.classList = \"nav-link\";\n\t// item1.addEventListener(\"click\", displayHome);\n\n\tconst item2 = document.createElement(\"li\");\n\titem2.textContent = \"To-Do\";\n\titem2.id = \"todo-view\";\n\titem1.classList = \"nav-link\";\n\t// item1.addEventListener(\"click\", displayTodo);\n\n\tconst item3 = document.createElement(\"li\");\n\titem3.textContent = \"Projects\";\n\titem3.id = \"projects-view\";\n\titem1.classList = \"nav-link\";\n\t// item1.addEventListener(\"click\", displayProjects);\n\n\tconst item4 = document.createElement(\"li\");\n\titem4.textContent = \"Notes\";\n\titem4.id = \"notes-view\";\n\titem1.classList = \"nav-link\";\n\t// item1.addEventListener(\"click\", displayNotes);\n\n\tconst btnNewTodo = document.createElement(\"button\");\n\tbtnNewTodo.id = \"btn-newTodo\";\n\tbtnNewTodo.textContent = \"+\";\n\tbtnNewTodo.addEventListener(\"click\", _newPopup__WEBPACK_IMPORTED_MODULE_0__.newPopup);\n\n\tlist.appendChild(item1);\n\tlist.appendChild(item2);\n\tlist.appendChild(item3);\n\tlist.appendChild(item4);\n\n\tnavBar.appendChild(list);\n\tnavBar.appendChild(btnNewTodo);\n};\n\n\n//# sourceURL=webpack://odin-todo/./src/navBar.js?");
+
+/***/ }),
+
+/***/ "./src/newNotePopup.js":
+/*!*****************************!*\
+  !*** ./src/newNotePopup.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"newNote\": () => (/* binding */ newNote)\n/* harmony export */ });\nconst newNote = () => {\n\tconst content = document.getElementById(\"popup-input\");\n\tcontent.innerHTML = \"\";\n\n\tconst title = document.createElement(\"textarea\");\n\ttitle.classList = \"new-title\";\n\ttitle.placeholder = \"Title: Gear for bikepacking\";\n\n\tconst info = document.createElement(\"textarea\");\n\tinfo.classList = \"new-info\";\n\tinfo.placeholder = \"Details: e.g buy a small toothbrush\";\n\n\tconst newNoteBtn = document.createElement(\"button\");\n\tnewNoteBtn.id = \"add-note-btn\";\n\tnewNoteBtn.textContent = \"CREATE NOTE\";\n\n\tcontent.appendChild(title);\n\tcontent.appendChild(info);\n\tcontent.appendChild(newNoteBtn);\n};\n\n\n//# sourceURL=webpack://odin-todo/./src/newNotePopup.js?");
+
+/***/ }),
+
+/***/ "./src/newPopup.js":
+/*!*************************!*\
+  !*** ./src/newPopup.js ***!
+  \*************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"newPopup\": () => (/* binding */ newPopup)\n/* harmony export */ });\n/* harmony import */ var _newTodoPopup__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./newTodoPopup */ \"./src/newTodoPopup.js\");\n/* harmony import */ var _newProjectPopup__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./newProjectPopup */ \"./src/newProjectPopup.js\");\n/* harmony import */ var _newNotePopup__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./newNotePopup */ \"./src/newNotePopup.js\");\n\n\n\n\nconst newPopup = () => {\n\tconst body = document.querySelector(\"body\");\n\tconst popup = document.createElement(\"div\");\n\tpopup.id = \"new-popup\";\n\n\t// heading for popup\n\tconst heading = document.createElement(\"div\");\n\theading.id = \"popup-heading\";\n\theading.textContent = \"Create new...\";\n\n\t// nav-bar for the popup\n\tconst nav = document.createElement(\"div\");\n\tnav.id = \"popup-nav\";\n\n\tconst list = document.createElement(\"ul\");\n\n\tconst item1 = document.createElement(\"li\");\n\titem1.textContent = \"Todo\";\n\titem1.addEventListener(\"click\", _newTodoPopup__WEBPACK_IMPORTED_MODULE_0__.newTodo);\n\n\tconst item2 = document.createElement(\"li\");\n\titem2.textContent = \"Project\";\n\titem2.addEventListener(\"click\", _newProjectPopup__WEBPACK_IMPORTED_MODULE_1__.newProject);\n\n\tconst item3 = document.createElement(\"li\");\n\titem3.textContent = \"Notes\";\n\titem3.addEventListener(\"click\", _newNotePopup__WEBPACK_IMPORTED_MODULE_2__.newNote);\n\n\tlist.appendChild(item1);\n\tlist.appendChild(item2);\n\tlist.appendChild(item3);\n\n\tconst inputs = document.createElement(\"div\");\n\tinputs.id = \"popup-input\";\n\n\t// append to popup\n\tnav.appendChild(list);\n\tpopup.appendChild(heading);\n\tpopup.appendChild(nav);\n\tpopup.appendChild(inputs);\n\tbody.appendChild(popup);\n};\n\n\n//# sourceURL=webpack://odin-todo/./src/newPopup.js?");
+
+/***/ }),
+
+/***/ "./src/newProjectPopup.js":
+/*!********************************!*\
+  !*** ./src/newProjectPopup.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"newProject\": () => (/* binding */ newProject)\n/* harmony export */ });\nconst newProject = () => {\n\tconst content = document.getElementById(\"popup-input\");\n\tcontent.innerHTML = \"\";\n\n\tconst title = document.createElement(\"textarea\");\n\ttitle.classList = \"new-title\";\n\ttitle.placeholder = \"Title: Do Something\";\n\n\tconst newProjectBtn = document.createElement(\"button\");\n\tnewProjectBtn.id = \"add-project\";\n\tnewProjectBtn.textContent = \"CREATE PROJECT\";\n\n\tcontent.appendChild(title);\n\tcontent.appendChild(newProjectBtn);\n};\n\n\n//# sourceURL=webpack://odin-todo/./src/newProjectPopup.js?");
+
+/***/ }),
+
+/***/ "./src/newTodoPopup.js":
+/*!*****************************!*\
+  !*** ./src/newTodoPopup.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"newTodo\": () => (/* binding */ newTodo)\n/* harmony export */ });\n/* harmony import */ var _addTodo__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./addTodo */ \"./src/addTodo.js\");\n/* harmony import */ var _todo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./todo */ \"./src/todo.js\");\n\n\n\nconst newTodo = () => {\n\tconst content = document.getElementById(\"popup-input\");\n\tcontent.innerHTML = \"\";\n\n\tconst title = document.createElement(\"textarea\");\n\ttitle.classList = \"new-title\";\n\ttitle.placeholder = \"Title: Empty trash\";\n\n\tconst info = document.createElement(\"textarea\");\n\tinfo.classList = \"new-info\";\n\tinfo.placeholder = \"Details: e.g bathroom, kitchen, desk\";\n\n\tconst date = document.createElement(\"input\");\n\tdate.classList = \"new-date\";\n\tdate.type = \"date\";\n\n\t// prioritie buttons\n\tconst priorities = document.createElement(\"div\");\n\tpriorities.id = \"priorities\";\n\n\tconst lowPrio = document.createElement(\"button\");\n\tlowPrio.textContent = \"LOW\";\n\tlowPrio.id = \"low-prioritie\";\n\n\tconst mediumPrio = document.createElement(\"button\");\n\tmediumPrio.textContent = \"MEDIUM\";\n\tmediumPrio.id = \"med-prioritie\";\n\n\tconst highPrio = document.createElement(\"button\");\n\thighPrio.textContent = \"HIGH\";\n\thighPrio.id = \"high-prioritie\";\n\n\tpriorities.appendChild(lowPrio);\n\tpriorities.appendChild(mediumPrio);\n\tpriorities.appendChild(highPrio);\n\n\t// create add button and the area\n\tconst addButtonArea = document.createElement(\"div\");\n\taddButtonArea.id = \"add-btn-area\";\n\tconst addBtn = document.createElement(\"button\");\n\taddBtn.id = \"btn-add\";\n\taddBtn.textContent = \"ADD\";\n\taddBtn.addEventListener(\"click\", _todo__WEBPACK_IMPORTED_MODULE_1__.TodoManager.addTodo);\n\n\taddButtonArea.appendChild(addBtn);\n\tcontent.appendChild(title);\n\tcontent.appendChild(info);\n\tcontent.appendChild(date);\n\tcontent.appendChild(priorities);\n\tcontent.appendChild(addButtonArea);\n};\n\n\n//# sourceURL=webpack://odin-todo/./src/newTodoPopup.js?");
+
+/***/ }),
+
+/***/ "./src/todo.js":
+/*!*********************!*\
+  !*** ./src/todo.js ***!
+  \*********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Todo\": () => (/* binding */ Todo),\n/* harmony export */   \"TodoManager\": () => (/* binding */ TodoManager)\n/* harmony export */ });\n/* harmony import */ var _storage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../storage */ \"./storage.js\");\n\n\nclass Todo {\n\tconstructor(title, info, date, prio) {\n\t\tthis.title = title;\n\t\tthis.info = info;\n\t\tthis.date = date;\n\t\tthis.prio = prio;\n\t}\n}\n\n// todo manager\n// with storage + addTodo, remove... etc\n\nclass TodoManager {\n\tstatic todoArray = [];\n\tstatic addTodo() {\n\t\tconst title = document.querySelector(\".new-title\").value;\n\t\tconst info = document.querySelector(\".new-info\").value;\n\t\tconst dueDate = document.querySelector(\".new-date\").value;\n\t\tconst prio = () => \"notAssigned\";\n\n\t\tlet todo = new Todo(title, info, dueDate, prio());\n\t\tconsole.log(TodoManager.todoArray);\n\t\tTodoManager.todoArray.push(todo);\n\t\tconsole.log(TodoManager.todoArray);\n\t\twindow.localStorage.setItem(\"todoArray\", JSON.stringify(TodoManager.todoArray));\n\t}\n}\n\n\n//# sourceURL=webpack://odin-todo/./src/todo.js?");
+
+/***/ }),
+
+/***/ "./storage.js":
+/*!********************!*\
+  !*** ./storage.js ***!
+  \********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"storage\": () => (/* binding */ storage)\n/* harmony export */ });\nconst storage = [];\n\n\n//# sourceURL=webpack://odin-todo/./storage.js?");
 
 /***/ })
 

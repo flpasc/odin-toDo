@@ -1,6 +1,6 @@
-import { newTodo } from "./newTodo";
-import { newProject } from "./newProject";
-import { newNote } from "./newNote";
+import { newTodo } from "./newTodoPopup";
+import { newProject } from "./newProjectPopup";
+import { newNote } from "./newNotePopup";
 
 export const newPopup = () => {
 	const body = document.querySelector("body");

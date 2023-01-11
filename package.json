@@ -4,7 +4,8 @@
 	"description": "",
 	"private": true,
 	"scripts": {
-		"build": "webpack"
+		"build": "webpack",
+		"watch:js": "onchange 'src/*.js' -- npm run build"
 	},
 	"repository": {
 		"type": "git",
@@ -22,5 +23,8 @@
 		"style-loader": "^3.3.1",
 		"webpack": "^5.75.0",
 		"webpack-cli": "^5.0.1"
+	},
+	"dependencies": {
+		"nodemon": "^2.0.20"
 	}
 }
