@@ -25,6 +25,7 @@
 		"webpack-cli": "^5.0.1"
 	},
 	"dependencies": {
-		"nodemon": "^2.0.20"
+		"nodemon": "^2.0.20",
+		"onchange": "^7.1.0"
 	}
 }
