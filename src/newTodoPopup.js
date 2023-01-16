@@ -1,5 +1,7 @@
-import { addTodo } from "./addTodo";
-import { TodoManager } from "./todo";
+import { clearPopup } from "./clearPopup";
+import { renderContent } from "./renderContent";
+import { TodoManager } from "./TodoManager";
+import { toggleNewPopupOff } from "./toggleNewPopupOff";
 
 export const newTodo = () => {
 	const content = document.getElementById("popup-input");
@@ -37,13 +39,18 @@ export const newTodo = () => {
 	priorities.appendChild(mediumPrio);
 	priorities.appendChild(highPrio);
 
-	// create add button and the area
+	// create add button and the div
 	const addButtonArea = document.createElement("div");
 	addButtonArea.id = "add-btn-area";
 	const addBtn = document.createElement("button");
 	addBtn.id = "btn-add";
 	addBtn.textContent = "ADD";
-	addBtn.addEventListener("click", TodoManager.addTodo);
+	addBtn.addEventListener("click", () => {
+		TodoManager.addTodo();
+		renderContent();
+		clearPopup();
+		toggleNewPopupOff();
+	});
 
 	addButtonArea.appendChild(addBtn);
 	content.appendChild(title);

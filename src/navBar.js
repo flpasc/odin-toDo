@@ -1,4 +1,5 @@
 import { newPopup } from "./newPopup";
+import { toggleNewPopupOn } from "./toggleNewPopupOn";
 
 export const navBar = () => {
 	const navBar = document.getElementById("nav-bar");
@@ -32,7 +33,7 @@ export const navBar = () => {
 	const btnNewTodo = document.createElement("button");
 	btnNewTodo.id = "btn-newTodo";
 	btnNewTodo.textContent = "+";
-	btnNewTodo.addEventListener("click", newPopup);
+	btnNewTodo.addEventListener("click", toggleNewPopupOn);
 
 	list.appendChild(item1);
 	list.appendChild(item2);
