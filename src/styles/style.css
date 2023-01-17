@@ -16,6 +16,7 @@ body {
 
 #content {
 	display: flex;
+	flex-wrap: wrap;
 }
 
 #header {
@@ -107,7 +108,8 @@ body {
 	grid-area: 4 / 2 / 5 / 3;
 }
 
-#todo-item {
+#todo-item,
+#note-item {
 	background-color: rgb(232, 177, 74);
 	display: grid;
 	grid-template: 1fr 4fr 1fr / 1fr;
@@ -117,4 +119,8 @@ body {
 
 	padding: 10px;
 	margin: 20px;
+}
+
+#note-item {
+	background-color: rgb(197, 93, 93);
 }

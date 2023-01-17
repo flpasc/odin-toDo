@@ -1,6 +1,7 @@
 export class Project {
-	constructor(title, info) {
+	constructor(title) {
+		this.storage = [];
+
 		this.title = title;
-		this.info = info;
 	}
 }

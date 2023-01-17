@@ -21,6 +21,16 @@ export class TodoManager {
 		window.localStorage.setItem("todoArray", JSON.stringify(TodoManager.todoArray));
 	}
 
+	static updateArray() {
+		const storage = JSON.parse(window.localStorage.getItem("todoArray"));
+
+		if (storage === null) {
+			TodoManager.todoArray = [];
+		} else {
+			TodoManager.todoArray = storage;
+		}
+	}
+
 	static removeTodo() {}
 	static updateTodo() {}
 }
