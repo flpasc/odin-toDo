@@ -1,5 +1,6 @@
 import { clearPopup } from "./clearPopup";
 import { renderContent } from "./renderContent";
+import { PrioManager } from "./setPrio";
 import { TodoManager } from "./TodoManager";
 import { toggleNewPopupOff } from "./toggleNewPopupOff";
 
@@ -26,14 +27,20 @@ export const newTodo = () => {
 	const lowPrio = document.createElement("button");
 	lowPrio.textContent = "LOW";
 	lowPrio.id = "low-prioritie";
+	lowPrio.classList = "prio-btn";
+	lowPrio.addEventListener("click", PrioManager.setPrio);
 
 	const mediumPrio = document.createElement("button");
 	mediumPrio.textContent = "MEDIUM";
 	mediumPrio.id = "med-prioritie";
+	mediumPrio.classList = "prio-btn";
+	mediumPrio.addEventListener("click", PrioManager.setPrio);
 
 	const highPrio = document.createElement("button");
 	highPrio.textContent = "HIGH";
 	highPrio.id = "high-prioritie";
+	highPrio.classList = "prio-btn";
+	highPrio.addEventListener("click", PrioManager.setPrio);
 
 	priorities.appendChild(lowPrio);
 	priorities.appendChild(mediumPrio);
