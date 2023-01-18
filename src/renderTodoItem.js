@@ -16,14 +16,31 @@ export const renderTodoItem = (todo) => {
 	date.id = "todo-date";
 	date.textContent = todo.date;
 
+	// bottom row with prioritie, project, edit
+	const bottomRow = document.createElement("div");
+	bottomRow.id = "todo-bottomRow";
+
 	const prio = document.createElement("div");
 	prio.id = "todo-prio";
 	prio.textContent = todo.prio;
 
+	const project = document.createElement("div");
+	project.id = "todo-project";
+	project.textContent = todo.project;
+
+	const editBtn = document.createElement("button");
+	editBtn.id = "todo-edit";
+	editBtn.classList = "edit-btn";
+	editBtn.textContent = "Edit";
+
+	bottomRow.appendChild(prio);
+	bottomRow.appendChild(project);
+	bottomRow.appendChild(editBtn);
+
 	todoObject.appendChild(title);
 	todoObject.appendChild(details);
 	todoObject.appendChild(date);
-	todoObject.appendChild(prio);
+	todoObject.appendChild(bottomRow);
 
 	content.appendChild(todoObject);
 };

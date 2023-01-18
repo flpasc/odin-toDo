@@ -1,4 +1,4 @@
-import { PrioManager, setPrio } from "./setPrio";
+import { PrioManager } from "./setPrio";
 import { Todo } from "./Todo";
 
 // todo manager
@@ -15,8 +15,9 @@ export class TodoManager {
 		const info = document.querySelector(".new-info").value;
 		const dueDate = document.querySelector(".new-date").value;
 		const prio = PrioManager.lastClickedPrio;
+		const project = document.getElementById("todo-dropdown").value;
 
-		let todo = new Todo(title, info, dueDate, prio);
+		let todo = new Todo(title, info, dueDate, prio, project);
 		TodoManager.todoArray.push(todo);
 		console.log(TodoManager.todoArray);
 		window.localStorage.setItem("todoArray", JSON.stringify(TodoManager.todoArray));

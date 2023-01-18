@@ -1,4 +1,5 @@
 import { clearPopup } from "./clearPopup";
+import { ProjectManager } from "./ProjectManager";
 import { renderContent } from "./renderContent";
 import { PrioManager } from "./setPrio";
 import { TodoManager } from "./TodoManager";
@@ -46,7 +47,18 @@ export const newTodo = () => {
 	priorities.appendChild(mediumPrio);
 	priorities.appendChild(highPrio);
 
-	// create add button and the div
+	// create add button and project selector and the div
+	const dropdown = document.createElement("select");
+	dropdown.id = "todo-dropdown";
+
+	ProjectManager.projectsArray.forEach((project) => {
+		const option = document.createElement("option");
+		option.textContent = project.title;
+		option.value = project.title;
+
+		dropdown.appendChild(option);
+	});
+
 	const addButtonArea = document.createElement("div");
 	addButtonArea.id = "add-btn-area";
 	const addBtn = document.createElement("button");
@@ -59,10 +71,12 @@ export const newTodo = () => {
 		toggleNewPopupOff();
 	});
 
+	addButtonArea.appendChild(dropdown);
 	addButtonArea.appendChild(addBtn);
 	content.appendChild(title);
 	content.appendChild(info);
 	content.appendChild(date);
 	content.appendChild(priorities);
+
 	content.appendChild(addButtonArea);
 };

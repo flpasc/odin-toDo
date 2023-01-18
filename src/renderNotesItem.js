@@ -12,8 +12,13 @@ export const renderNotesItem = (note) => {
 	info.id = "note-info";
 	info.textContent = note.info;
 
+	const editBtn = document.createElement("button");
+	editBtn.id = "note-edit";
+	editBtn.classList = "edit-btn";
+
 	notesObject.appendChild(title);
 	notesObject.appendChild(info);
+	notesObject.appendChild(editBtn);
 
 	content.appendChild(notesObject);
 };

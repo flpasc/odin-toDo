@@ -139,3 +139,13 @@ body {
 #high-prioritie:focus {
 	background-color: rgb(197, 62, 62);
 }
+
+#todo-bottomRow {
+	display: flex;
+	align-items: center;
+	width: 100%;
+}
+
+#todo-edit {
+	margin-left: auto;
+}

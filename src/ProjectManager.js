@@ -13,4 +13,14 @@ export class ProjectManager {
 
 		window.localStorage.setItem("projectArray", JSON.stringify(ProjectManager.projectsArray));
 	}
+
+	static updateProjects() {
+		const storage = JSON.parse(window.localStorage.getItem("projectArray"));
+
+		if (storage === null) {
+			ProjectManager.projectsArray = [];
+		} else {
+			ProjectManager.projectsArray = storage;
+		}
+	}
 }

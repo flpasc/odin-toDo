@@ -7,6 +7,7 @@ import { newPopup } from "./newPopup";
 import { renderContent } from "./renderContent";
 import { TodoManager } from "./TodoManager";
 import { NotesManager } from "./NotesManager";
+import { ProjectManager } from "./ProjectManager";
 
 layout();
 footer();
@@ -15,4 +16,5 @@ header();
 newPopup();
 TodoManager.updateArray();
 NotesManager.updateNotes();
+ProjectManager.updateProjects();
 renderContent();

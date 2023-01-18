@@ -15,5 +15,8 @@ export class PrioManager {
 		if (document.activeElement === high) {
 			PrioManager.lastClickedPrio = "high";
 		}
+		if (document.activeElement === undefined) {
+			PrioManager.lastClickedPrio = "";
+		}
 	}
 }
