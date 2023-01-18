@@ -10,7 +10,7 @@ export const navBar = () => {
 	item1.textContent = "Home";
 	item1.id = "home-view";
 	item1.classList = "nav-link";
-	// item1.addEventListener("click", displayHome);
+	item1.addEventListener("click", displayHome);
 
 	const item2 = document.createElement("li");
 	item2.textContent = "To-Do";
