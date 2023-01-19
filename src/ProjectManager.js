@@ -1,3 +1,4 @@
+import { navBar } from "./navBar";
 import { Project } from "./Project";
 
 export class ProjectManager {
@@ -12,6 +13,7 @@ export class ProjectManager {
 		console.log(ProjectManager.projectsArray);
 
 		window.localStorage.setItem("projectArray", JSON.stringify(ProjectManager.projectsArray));
+		navBar();
 	}
 
 	static updateProjects() {
