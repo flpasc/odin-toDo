@@ -3,6 +3,9 @@ import { displayHome } from "./displayHome";
 import { displayTodos } from "./displayTodos";
 import { displayNotes } from "./displayNotes";
 import { ProjectManager } from "./ProjectManager";
+import { TodoManager } from "./TodoManager";
+import { renderTodoItem } from "./renderTodoItem";
+import { clearContent } from "./clearContent";
 
 export const navBar = () => {
 	const navBar = document.getElementById("nav-bar");
@@ -32,6 +35,14 @@ export const navBar = () => {
 		const projectElement = document.createElement("li");
 		projectElement.classList = "project-link";
 		projectElement.textContent = project.title;
+		projectElement.addEventListener("click", () => {
+			clearContent();
+			TodoManager.todoArray.forEach((todo) => {
+				if (todo.project === project.title) {
+					renderTodoItem(todo);
+				}
+			});
+		});
 		item3.appendChild(projectElement);
 	});
 

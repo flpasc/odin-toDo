@@ -1,3 +1,4 @@
+import { displayHome } from "./displayHome";
 import { Notes } from "./Notes";
 
 export class NotesManager {
@@ -23,5 +24,12 @@ export class NotesManager {
 		} else {
 			NotesManager.notesArray = storage;
 		}
+	}
+	static removeNote(note) {
+		const index = NotesManager.notesArray.findIndex((item) => item.title === note.title);
+
+		NotesManager.notesArray.splice(index, 1);
+		window.localStorage.setItem("notesArray", JSON.stringify(NotesManager.notesArray));
+		displayHome();
 	}
 }

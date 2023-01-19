@@ -149,3 +149,21 @@ body {
 #todo-edit {
 	margin-left: auto;
 }
+
+#edit-popup {
+	position: absolute;
+	background-color: rgb(54, 211, 219);
+	min-height: 30vh;
+	min-width: 5vw;
+
+	display: none;
+	grid-template: 30px 1fr 4fr/ 1fr;
+}
+
+.todo-head-row {
+	display: flex;
+}
+
+#todo-delete-btn {
+	margin-left: auto;
+}

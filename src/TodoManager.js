@@ -1,5 +1,8 @@
+import { displayHome } from "./displayHome";
+import { editPopup } from "./editPopup";
 import { PrioManager } from "./setPrio";
 import { Todo } from "./Todo";
+import { toggleEditPopupOn } from "./toggleEditPopupOn";
 
 // todo manager
 // with storage + addTodo, remove... etc
@@ -33,6 +36,30 @@ export class TodoManager {
 		}
 	}
 
-	static removeTodo() {}
-	static updateTodo() {}
+	static removeTodo(todo) {
+		let index = TodoManager.todoArray.findIndex((item) => item.title === todo.title);
+
+		TodoManager.todoArray.splice(index, 1);
+		window.localStorage.setItem("todoArray", JSON.stringify(TodoManager.todoArray));
+		displayHome();
+	}
+
+	static editTodo(todo) {
+		let index = TodoManager.todoArray.findIndex((item) => item.title === todo.title);
+
+		editPopup(index);
+		toggleEditPopupOn();
+	}
+	static updateTodo(index) {
+		const editTitle = document.getElementById("edit-title").value;
+		const editInfo = document.getElementById("edit-info").value;
+		let editedTodo = TodoManager.todoArray[index];
+		console.log(editedTodo);
+
+		editedTodo.title = editTitle;
+		editedTodo.info = editInfo;
+
+		TodoManager.todoArray.splice(index, 1, editedTodo);
+		window.localStorage.setItem("todoArray", JSON.stringify(TodoManager.todoArray));
+	}
 }
