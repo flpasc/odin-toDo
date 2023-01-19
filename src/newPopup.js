@@ -9,7 +9,7 @@ export const newPopup = () => {
 
 	// heading for popup
 	const heading = document.createElement("div");
-	heading.id = "popup-heading";
+	heading.classList = "popup-heading";
 	heading.textContent = "Create new...";
 
 	// nav-bar for the popup
