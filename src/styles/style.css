@@ -1,15 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Roboto+Mono:ital,wght@0,300;1,700&display=swap");
+
 body {
 	margin: 0px;
 	padding: 0px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	font-family: "Audiowide";
+	font-family: "Roboto Mono", monospace;
 }
 
 #main {
 	min-width: 100vw;
 	min-height: 100vh;
-	background-color: rgb(97, 228, 127);
+	background-color: beige;
 	display: grid;
 	grid-template: 60px 1fr 40px / 1fr 4fr;
 }
@@ -17,26 +21,53 @@ body {
 #content {
 	display: flex;
 	flex-wrap: wrap;
+	border: 2px solid rgb(187, 187, 167);
+	box-shadow: 7px 8px 8px rgb(182, 182, 164);
+	margin-right: 5vw;
+	margin-bottom: 2vh;
 }
 
 #header {
-	background-color: rgb(231, 231, 127);
+	background-color: beige;
 	grid-area: 1 / 1 / 2 / 3;
+	font-family: "Audiowide", cursive;
+	font-family: "Roboto Mono", monospace;
+	font-size: 40px;
+	font-weight: 900;
+	padding-left: 10vw;
 }
 
 #nav-bar {
-	background-color: rgb(131, 131, 225);
+	background-color: beige;
 	grid-area: 2 / 1 / 3 / 2;
+	font-size: 20px;
+	font-weight: 800;
 }
 
 #nav-bar > ul {
 	display: flex;
 	flex-direction: column;
 	list-style: none;
+	padding: 20px 3vw;
+}
+
+#nav-bar > ul > li {
+	padding-top: 20px;
+}
+
+#nav-bar > ul > li:hover {
+	color: green;
+	transform: scale(1.2);
+	padding-left: 20px;
+}
+
+#nav-bar > ul > li > li:hover {
+	color: rgb(5, 86, 5);
+	transform: scale(1.2);
 }
 
 #footer {
-	background-color: rgb(219, 124, 124);
+	background-color: beige;
 	grid-area: 3 / 1 / 4 / 3;
 	flex-direction: column;
 }
@@ -46,21 +77,24 @@ body {
 	display: flex;
 	justify-content: space-around;
 	align-content: center;
+	padding-bottom: 2vh;
 }
 
 #new-popup {
 	position: absolute;
-	background-color: rgb(211, 168, 88);
+	background-color: rgb(209, 209, 180);
 	min-height: 50vh;
 	min-width: 50vw;
 
 	display: none;
 	grid-template: 30px 1fr / 1fr 4fr;
+	border: 1px solid rgb(179, 179, 158);
+	box-shadow: 10px 10px 5px rgb(176, 176, 158);
 }
 
 #popup-nav {
 	grid-area: 2 / 1 / 3 / 2;
-	background-color: rgb(175, 115, 230);
+	background-color: rgb(180, 180, 153);
 }
 
 #popup-heading {
@@ -69,15 +103,23 @@ body {
 }
 
 #popup-input {
-	background-color: rgb(219, 230, 60);
+	background-color: rgba(36, 158, 97, 0.435);
 	grid-area: 2 / 2 / 3 / 3;
 	display: grid;
-	grid-template: 1fr 6fr 1fr 1fr / 1fr 1fr;
+	grid-template: 1fr 6fr 1fr 1fr / 1fr;
 }
 
 .new-title {
-	grid-area: 1 / 1 / 2 / 3;
+	grid-area: 1 / 1 / 2 / 4;
 	margin: 2px 2px;
+}
+
+.note-title {
+	grid-area: 1 / 1 / 3 / 2;
+}
+
+.note-info {
+	grid-area: 2 / 1 / -2 / -1;
 }
 
 .new-info {
@@ -119,10 +161,15 @@ body {
 
 	padding: 10px;
 	margin: 20px;
+
+	border: 1px solid black;
+	box-shadow: 5px 5px 5px rgba(125, 125, 114, 0.646);
 }
 
 #note-item {
-	background-color: rgb(197, 93, 93);
+	background-color: rgb(235, 246, 87);
+	border: 1px solid black;
+	box-shadow: 5px 5px 5px rgba(125, 125, 114, 0.646);
 }
 
 #low-prioritie:hover,
@@ -140,10 +187,36 @@ body {
 	background-color: rgb(197, 62, 62);
 }
 
+#todo-title,
+#note-title {
+	font-weight: 900;
+	font-size: 20px;
+}
+
 #todo-bottomRow {
 	display: flex;
-	align-items: center;
 	width: 100%;
+}
+
+#todo-project {
+	padding: 0px 15px;
+	background-color: rgba(128, 128, 128, 0.436);
+	border: 1px solid grey;
+}
+
+#todo-info {
+	background-color: rgb(245, 195, 104);
+	padding: 0px 5px;
+	margin: 10px 0px;
+}
+
+#todo-prio {
+	padding: 0px 10px;
+	background-color: beige;
+}
+
+#todo-date {
+	justify-self: center;
 }
 
 #todo-edit {
@@ -152,7 +225,7 @@ body {
 
 #edit-popup {
 	position: absolute;
-	background-color: rgb(54, 211, 219);
+	background-color: rgb(105, 142, 105);
 	min-height: 30vh;
 	min-width: 5vw;
 
@@ -166,4 +239,30 @@ body {
 
 #todo-delete-btn {
 	margin-left: auto;
+}
+
+.edit-btn {
+	width: max-content;
+	margin-left: auto;
+	padding: 5px 10px;
+}
+
+.project-link {
+	padding: 10px 2px;
+	margin: 0px 10px;
+	font-size: 16px;
+}
+
+#btn-newTodo {
+	padding: 5px 15px;
+	position: absolute;
+	left: 12vw;
+	font-size: 40px;
+	font-weight: 100;
+	top: 80vh;
+}
+
+#btn-newTodo:hover {
+	background-color: rgb(105, 142, 105);
+	transform: scale(1.1);
 }

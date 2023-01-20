@@ -31,6 +31,9 @@ export const renderNotesItem = (note) => {
 	editBtn.id = "note-edit";
 	editBtn.classList = "edit-btn";
 	editBtn.textContent = "Edit";
+	editBtn.addEventListener("click", () => {
+		NotesManager.editNote(note);
+	});
 
 	notesObject.appendChild(topRow);
 	notesObject.appendChild(info);
